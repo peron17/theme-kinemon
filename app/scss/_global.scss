@@ -1,0 +1,91 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    background-color: var(--pastel-cream);
+    font-family: "Public Sans", sans-serif;
+    color: var(--black);
+}
+
+header {
+    display: block;
+    padding: 1.25rem 0;
+}
+
+.brand {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--black);
+        text-decoration: none;
+        margin: 0 3rem;
+        line-height: 0.8;
+        display: inline-block;
+
+        span {
+            display: block;
+        }
+
+        span:first-of-type {
+        }
+
+        span:last-of-type {
+        }
+    }
+}
+
+.navbar {
+    &-desktop {
+        a {
+            margin-right: 1.625rem;
+            color: var(--black);
+            text-decoration: none;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            &:hover {
+                
+            }
+        }
+
+    }
+
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        font-weight: 400;
+        color: var(--black);
+        margin-right: 0.625rem;
+        line-height: 1;
+        display: inline-block;
+        padding-bottom: 3px;
+    }
+
+    a:last-of-type {
+        margin-right: 0;
+    }
+
+    a:hover {
+        border-bottom: 2px solid var(--black);
+        padding-bottom: 1px;
+    }
+}
