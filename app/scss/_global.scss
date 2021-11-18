@@ -18,16 +18,15 @@ body {
     color: var(--black);
 }
 
-header {
+.container {
     display: block;
-    padding: 1.25rem 0;
 }
 
 .brand {
-    display: block;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 
     &__logo {
         font-size: 1.5rem;
@@ -51,41 +50,223 @@ header {
 }
 
 .navbar {
+    a {
+        color: var(--black);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: var(--light-red);
+        }
+    }
+
     &-desktop {
         a {
             margin-right: 1.625rem;
-            color: var(--black);
-            text-decoration: none;
+        }
+        text-align: center;
+    }
 
-            &:last-of-type {
-                margin-right: 0;
+    &-mobile {
+        padding: 1.2rem 1.2rem 0 1.2rem;
+        border-top: 1px solid var(--black);
+        display: grid;
+        grid-template-columns: auto auto;
+
+        a {
+            display: block;
+            margin-bottom: 1.4rem;
+            text-align: center;
+        }
+    }
+}
+
+#navbarMobile {
+    display: none;
+    z-index: 2;
+
+    &.show {
+        display: block;
+    }
+}
+
+.btn-search {
+    display: block;
+}
+.btn-search:hover,
+.btn-search:visited {
+    color: var(--black);
+}
+
+#btn-toggle {
+    width: 22px;
+    height: 3px;
+    position: relative;
+
+    span {
+        width: 100%;
+        height: 3px;
+        display: block;
+        background-color: var(--black);
+        transition: all 0.3s;
+        border-radius: 1px;
+        position: relative;
+    }
+
+    span:first-of-type,
+    span:last-of-type {
+        position: absolute;
+        width: 22px;
+    }
+
+    span:first-of-type {
+        top: -7px;
+    }
+
+    span:last-of-type {
+        bottom: -7px;
+    }
+
+    &.on span {
+        background-color: transparent;
+    }
+
+    &.on span:first-of-type {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: var(--black);
+    }
+
+    &.on span:last-of-type {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: var(--black);
+    }
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    height: calc(100vh - 100px);
+
+    &__left {
+        background: url("../../images/person.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__right {
+        background-color: var(--light-red);
+        color: var(--black);
+        text-align: center;
+        display: grid;
+
+        .text {
+            height: calc((100vh - 100px) - 60px);
+            display: grid;
+            align-items: center;
+
+            span {
+                font-size: 0.8125rem;
+                letter-spacing: 4px;
+                font-weight: 400;
             }
 
-            &:hover {
-                
+            h1 {
+                margin: 2.5rem 0 0;
+                font-size: 40px;
+                font-weight: 500;
+                letter-spacing: -2px;
+            }
+
+            p {
+                font-family: "Lora", serif;
+                margin: 0.625rem 0;
             }
         }
 
-    }
+        .footer {
+            background-color: var(--light-red-darker);
+            height: 60px;
 
-    text-align: center;
+            ul {
+                margin: 0;
+                padding: 0;
 
-    a {
-        text-decoration: none;
-        font-weight: 400;
-        color: var(--black);
-        margin-right: 0.625rem;
-        line-height: 1;
-        display: inline-block;
-        padding-bottom: 3px;
-    }
+                li {
+                    list-style: none;
+                    display: inline;
 
-    a:last-of-type {
-        margin-right: 0;
-    }
+                    a {
+                        font-size: 1.125rem;
+                        line-height: 3;
+                        padding: 0.375rem 0.625rem;
+                        color: var(--black);
+                        border-radius: 2px;
 
-    a:hover {
-        border-bottom: 2px solid var(--black);
-        padding-bottom: 1px;
+                        &.socmed {
+                            background-size: 300%;
+                            transition: background-position 0.3s
+                                    cubic-bezier(0.47, 0.1, 1, 0.63),
+                                color 0.2s linear;
+                            transition-delay: 0s, 0.15s;
+
+                            &.github {
+                                background-image: linear-gradient(
+                                    45deg,
+                                    var(--light-red-darker) 0%,
+                                    var(--light-red-darker) 50%,
+                                    var(--black) 50%,
+                                    var(--black) 100%
+                                );
+                            }
+
+                            &.twitter {
+                                background-image: linear-gradient(
+                                    45deg,
+                                    var(--light-red-darker) 0%,
+                                    var(--light-red-darker) 50%,
+                                    #1da1f2 50%,
+                                    #1da1f2 100%
+                                );
+                            }
+
+                            &.instagram {
+                                background-image: linear-gradient(
+                                    45deg,
+                                    var(--light-red-darker) 0%,
+                                    var(--light-red-darker) 50%,
+                                    #e1306c 50%,
+                                    #e1306c 100%
+                                );
+                            }
+
+                            &.envelope {
+                                background-image: linear-gradient(
+                                    45deg,
+                                    var(--light-red-darker) 0%,
+                                    var(--light-red-darker) 50%,
+                                    #fcaf45 50%,
+                                    #fcaf45 100%
+                                );
+                            }
+
+                            &.github:hover,
+                            &.twitter:hover,
+                            &.instagram:hover,
+                            &.envelope:hover {
+                                color: #ffffff;
+                                cursor: pointer;
+                                background-position: 100% 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
