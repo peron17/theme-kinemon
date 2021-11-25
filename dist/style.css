@@ -29,8 +29,8 @@
 
 @media (min-width: 577px) {
   .container {
-    padding-left: 3.625rem;
-    padding-right: 3.625rem;
+    width: 50rem;
+    margin: auto;
   }
   .brand {
     -webkit-box-pack: center;
@@ -213,7 +213,7 @@ body {
 }
 
 .top__left {
-  background: url("../../images/person.jpg") no-repeat;
+  background: url("../../images/6.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 }
