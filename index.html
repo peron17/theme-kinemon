@@ -10,9 +10,7 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Public+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -26,69 +24,46 @@
 
 <body>
     <header>
-        <div class="container border-bottom">
-            <div class="brand">
-                <div id="btn-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <nav class="navbar navbar-desktop">
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                </nav>
-                <a href="#" class="brand__logo">
-                    <span>Tommy</span>
-                    <span>Priambodo</span>
-                </a>
-                <nav class="navbar navbar-desktop">
-                    <a href="">Blog</a>
-                    <a href="">Contact</a>
-                </nav>
-                <a href="" class="btn-search" id="btnSearch"><i class="fa fa-search"></i></a>
+        <div class="header-container">
+            <div id="btn-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav id="navbarMobile" class="navbar navbar-mobile">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Blog</a>
-                <a href="">Contact</a>
-            </nav>
+            <a href="index.html" class="logo">
+                <span>Tommy</span>
+                <span>Priambodo</span>
+            </a>
+            <div>
+                <nav>
+                    <a href="#" class="active">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                </nav>
+                <div class="btn-search" id="search">
+                    <span class="circle"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <section class="top">
-                <div class="top__left"></div>
-                <div class="top__right">
-                    <div class="text">
-                        <div>
-                            <span>HI, I AM</span>
-                            <h1>Tommy Priambodo</h1>
-                            <p>a Web Developer based on Indonesia. </p>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <ul>
-                            <li>
-                                <a href="#" class="socmed github"><i class="fab fa-github"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="socmed twitter"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="socmed instagram"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="socmed envelope"><i class="fa fa-envelope"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+        <section class="header">
+            <div class="container">
+                <div class="quote">
+                    <h2>"When do you think people die? When they are shot in the heart with a pistol? No. When they are
+                        ravaged by uncurable disease? No. When they drink a soup made from poisonous mushrooms!? No!.
+                        It’s when… they are forgotten."</h2>
+                    <img src="./images/hiriluk.jpg" class="img-rounded" alt="">
+                    <span>Dr. Hiriluk</span>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./app/js/script.js"></script>
 </body>
 
